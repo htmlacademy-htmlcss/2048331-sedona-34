@@ -14,14 +14,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
-}
-
 body {
   font-family: "PT-Sans", sans-serif;
   font-size: 18px;
@@ -46,7 +38,7 @@ body {
   text-decoration: none; 
 }
 
-.page-main {
+.intro {
   background-image: url("/images/background-index.jpg");
   color: #000000;
   background-color: #ffffff;
@@ -59,7 +51,6 @@ body {
 }
 
 .advantages-title {
-  font-family: "PT-Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -100,13 +91,17 @@ body {
   text-align: center;
 }
 
-.subscribe {
+.subscribe-index {
   text-align: center;
   background-image: url("/images/background-index-subscribe.jpg");
   color: #ffffff;
   background-color: rgba(131, 179, 211, 0.2);
   background-size: 100% auto;
   background-repeat: no-repeat;
+
+.subscribe-catalog {
+  text-align: center;
+  color: #000000;
 }
 
 .invitation-title {
@@ -137,12 +132,6 @@ font-size: 22px;
 line-height: 26px;
 }
 
-.footer-contacts-phone {
-  font-weight: 400;
-font-size: 40px;
-line-height: 40px;
-text-transform: uppercase;
-}
 
 .htmlacademy-link {
 
