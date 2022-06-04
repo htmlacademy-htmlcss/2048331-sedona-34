@@ -22,42 +22,47 @@ body {
   background: #ffffff;
 }
 
+.navigation-user-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
 .button {
-  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background: #756157;
   border-radius: 4px;
+  text-decoration: none;
+}
+
+
+.second-button {
+  background: #82B3D3;
+}
+
+.selected-button {
+  background: #7DB54F;
+}
+
+.invitation-button {
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .subscribe-button {
-  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
   color: #FFFFFF;
   background: #82B3D3;
   border-radius: 0px 10px 10px 0px;
-}
-
-.light-button {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #82B3D3;
-  border-radius: 4px;
 }
 
 .stars-button {
@@ -75,11 +80,10 @@ body {
   top: 0px;
 }
 
-.button-light {
+.apply-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  display: flex;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
@@ -102,25 +106,12 @@ body {
   text-decoration: none;
 }
 
-.navigation-user-link {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-}
-
 .intro {
   background-image: url("/images/background-index.jpg");
   color: #000000;
   background-color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.advantages {
-  text-align: center;
 }
 
 .advantages-title {
@@ -130,34 +121,44 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-text {
-  font-family: "PT-Sans", sans-serif;
+.advantages-list {
+  text-align: center;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-}
-
-.advantages-item-title {
-  font-family: "PT-Sans", sans-serif;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.advantages-advices-title {
-  font-family: "PT-Sans", sans-serif;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+  list-style: none
+  }
 
 .advantages-item {
-  font-family: "PT-Sans", sans-serif;
   font-size: 21px;
   line-height: 18px;
   font-weight: 400;
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-item-road {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-town {
+  color: #ffffff;
+  background: #82B3D3;
+}
+
+.advantages-item-bridge {
+  color: #ffffff;
+  background: #82B3D3;
+}
+
+.advantages-advices-item-burger {
+  background: #FFFFFF;
 }
 
 .invitation {
@@ -220,14 +221,14 @@ body {
 
 .inner-header {
   background-image: url("/images/background-catalog.jpg");
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #82B3D3;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .breadcrumbs-link {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -270,45 +271,50 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  color: #ffffff;
+  background-color: #82B3D3;
 }
 
 .hotel-filter-item {
+  color: #ffffff;
+  background-color: #82B3D3;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
 
 .price {
+  color: #ffffff;
+  background-color: #82B3D3;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  /*color: #FFFFFF;*/
 }
 
 .pagination-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
   background: #82B3D3;
   border: 1px solid #82B3D3;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .pagination-current {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
   background: #F2F2F2;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .select-amount {
@@ -317,3 +323,4 @@ body {
   line-height: 21px;
   color: #333333;
 }
+
