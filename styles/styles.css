@@ -14,11 +14,13 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100;
+  height: 100%; 
   font-family: "PT-Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -29,6 +31,9 @@ body {
 .container {
 margin: 0 auto;
 width: 1200px;
+display: flex;
+flex-direction: column;
+min-height: 100;
 }
 
 .main-container {
@@ -37,8 +42,6 @@ width: 1200px;
 
 .navigation {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .navigation-list {
@@ -52,11 +55,6 @@ list-style: none;
 max-width: 310px;
 margin-left: auto;
 list-style: none;
-}
-
-.page-container {
-  width: 1200;
-  margin: 0 auto;
 }
 
 .navigation-user-link {
@@ -78,7 +76,7 @@ list-style: none;
   background-repeat: no-repeat;
 }
 
-.footer-social-list {
+.social-list {
   list-style: none
 }
 
@@ -236,6 +234,10 @@ list-style: none;
 }
 
 .advantages-advices {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
 color: #000000;
 background:#ffffff;
 list-style: none
@@ -278,11 +280,10 @@ list-style: none
 
 .advantages-item-town,
 .advantages-item-bridge {
+  width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 40px;
-
   color: #ffffff;
   background: #82B3D3;
 }
@@ -334,13 +335,14 @@ list-style: none
   line-height: 26px;
 }
 
-.footer-container {
-display: flex;
-width: 1200px;
-margin: 0 auto;
+                        /* футер */
+
+.footer-contacts {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.footer-social-list {
+.social-list {
 width: 150px;
 margin-right: 30px;
 }
@@ -359,6 +361,8 @@ max-width: 115px;
   color: #000000;
   text-decoration: none;
 }
+
+/* каталог */
 
 .inner-header {
   background-image: url("/images/background-catalog.jpg");
@@ -465,6 +469,3 @@ max-width: 115px;
   color: #333333;
 }
 
-html {
-  height: 100%;
-}
