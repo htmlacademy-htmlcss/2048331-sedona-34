@@ -20,7 +20,7 @@ html {
 
 body {
   margin: 0;
-  height: 100%; 
+  height: 100%;
   font-family: "PT-Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -29,32 +29,41 @@ body {
 }
 
 .container {
-margin: 0 auto;
-width: 1200px;
-display: flex;
-flex-direction: column;
-min-height: 100;
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100;
 }
 
 .main-container {
   flex-grow: 1;
 }
 
+/* /////////////////////////////////////навигация */
+
 .navigation {
   display: flex;
 }
 
-.navigation-list {
-margin: 0;
-padding: 0;
-width: 470px;
-list-style: none;
+.page-header-logo {
+  width: 139px;
+  margin-right: 30px;
+  margin-left: 70px;
 }
 
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 470px;
+  list-style: none;
+}
+
+
 .navigation-user-list {
-max-width: 310px;
-margin-left: auto;
-list-style: none;
+  max-width: 310px;
+  margin-left: auto;
+  list-style: none;
 }
 
 .navigation-user-link {
@@ -74,25 +83,6 @@ list-style: none;
 .favorite {
   background-image: url("/images/favorite.svg");
   background-repeat: no-repeat;
-}
-
-.social-list {
-  list-style: none
-}
-
-.vk {
-  background-image: url("/images/social/vkontakte.svg");
-  background-repeat: no-repeat;
-}
-
-.telegram {
-  background-image: url("/images/social/telegram.svg");
-  background-repeat: no-repeat;
-}
-
-.youtube {
-  background-image: url("/images/social/youtube.svg");
-  background-repeat: no-repeat; 
 }
 
 .visually-hidden {
@@ -187,9 +177,7 @@ list-style: none;
   margin: 0 auto;
 }
 
-.background-position {
-
-}
+.background-position {}
 
 .advantages {
   text-align: center;
@@ -213,7 +201,7 @@ list-style: none;
   line-height: 26px;
   font-weight: 400;
   list-style: none
-  }
+}
 
 .advantages-item {
   width: 400px;
@@ -238,9 +226,9 @@ list-style: none;
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
-color: #000000;
-background:#ffffff;
-list-style: none
+  color: #000000;
+  background: #ffffff;
+  list-style: none
 }
 
 .advantages-advices-item-house {
@@ -250,7 +238,7 @@ list-style: none
 }
 
 .advantages-advices-item-burger {
-  background:#ffffff; 
+  background: #ffffff;
   background-image: url("/images/icons/burger.svg");
   background-repeat: no-repeat;
 }
@@ -335,21 +323,23 @@ list-style: none
   line-height: 26px;
 }
 
-                        /* футер */
+/* ///////////////////////////////////футер */
 
 .footer-contacts {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .social-list {
-width: 150px;
-margin-right: 30px;
+  list-style: none;
+  width: 150px;
+  margin-right: 30px;
 }
 
 .htmlacademy-link {
-margin-left: auto;
-max-width: 115px;
+  margin-left: auto;
+  max-width: 115px;
 }
 
 .footer-contacts-phone {
@@ -362,7 +352,22 @@ max-width: 115px;
   text-decoration: none;
 }
 
-/* каталог */
+.vk {
+  background-image: url("/images/social/vkontakte.svg");
+  background-repeat: no-repeat;
+}
+
+.telegram {
+  background-image: url("/images/social/telegram.svg");
+  background-repeat: no-repeat;
+}
+
+.youtube {
+  background-image: url("/images/social/youtube.svg");
+  background-repeat: no-repeat;
+}
+
+/* ////////////////////////////////////каталог */
 
 .inner-header {
   background-image: url("/images/background-catalog.jpg");
@@ -385,10 +390,30 @@ max-width: 115px;
   color: #000000;
 }
 
+.hotels-select {
+  width: 1057px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 .icons-list-item {
   color: #000000;
   background: #ffffff;
   text-decoration: none;
+}
+
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 1056px;
+  list-style: none;
+}
+
+..hotels-card {
+  width: 340px;
+
 }
 
 .hotels-card-link {
@@ -437,6 +462,8 @@ max-width: 115px;
   text-transform: capitalize;
 }
 
+                             /* ////////////////////////////////пагинация */
+
 .pagination-link {
   font-weight: 700;
   font-size: 20px;
@@ -463,9 +490,15 @@ max-width: 115px;
 }
 
 .select-amount {
+  margin-left: auto;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 }
 
+.papagination-and-select {
+  width: 1056px;
+  display: flex;
+  flex-wrap: wrap;
+}
