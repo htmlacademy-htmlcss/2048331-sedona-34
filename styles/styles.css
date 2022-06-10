@@ -327,14 +327,12 @@ body {
 
 .page-footer {
   display: flex;
-  margin: 0 auto;
 }
 
 .social-list {
   display: flex;
   list-style: none;
   width: 150px;
-  margin-right: auto;
 }
 
 .footer-htmlacademy {
@@ -343,7 +341,6 @@ body {
 }
 
 .footer-phone {
-  margin: 0 auto;
   margin-left: auto;
 }
 
