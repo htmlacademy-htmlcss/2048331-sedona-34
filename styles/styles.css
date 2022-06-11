@@ -50,9 +50,13 @@ body {
   width: 139px;
   margin-right: 30px;
   margin-left: 70px;
+  position: relative;
+  z-index: 1;
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 470px;
@@ -61,18 +65,36 @@ body {
 
 
 .navigation-user-list {
+  display: flex;
   max-width: 310px;
   margin-left: auto;
   list-style: none;
 }
 
+.navigation-link {
+  display: block;
+  padding: 20px 17px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* по макету паддинги у кнопки и значков разные. Прописать в разных селекторах? */
+
 .navigation-user-link {
+  display: block;
+  padding: 9px 15px 8px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   text-align: center;
   color: #000000;
   text-decoration: none;
+  min-width: 19px;
+min-height: 17px;
 }
 
 .search {
@@ -86,8 +108,20 @@ body {
 }
 
 .visually-hidden {
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+/* если я использую такой вариант, картинки соцсетей в футере остаются на месте, если предложенный в скринкасте - исчезали, появились когда задала им размеры по величине кнопки */
+/*.visually-hidden {
+  visibility: hidden;
+}*/
 
 .button {
   font-weight: 700;
@@ -155,29 +189,21 @@ body {
   background: #ffffff;
 }
 
-.navigation-link {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-}
-
 .intro {
   background-image: url("/images/divider.svg"), url("/images/background-index.jpg");
   color: #000000;
   background-color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 
+/* почему не сработал марджин у внутренней картинки? Почему у всех фоновых картинок неполная высота? */
 .intro-img {
   display: block;
   margin: 0 auto;
+  margin-bottom: 82px;
 }
-
-.background-position {}
 
 .advantages {
   text-align: center;
@@ -189,7 +215,12 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+  margin-top: 63px;
+}
+
+.advantages-text {
+margin-bottom: 90px;
 }
 
 .advantages-list {
@@ -211,7 +242,7 @@ body {
   font-weight: 400;
 
 }
-
+/* у айтемов разные паддинги, мне на два дива разделить их? */
 .item {
   width: 400px;
   padding-top: 92px;
@@ -232,18 +263,27 @@ body {
 }
 
 .advantages-advices-item-house {
+  width: 400px;
+  padding: 80px 85px 81px;
+  box-sizing: border-box;
   background: rgba(131, 179, 211, 0.12);
   background-image: url("/images/icons/house.svg");
   background-repeat: no-repeat;
 }
 
 .advantages-advices-item-burger {
+  width: 400px;
+  padding: 80px 85px 81px;
+  box-sizing: border-box;
   background: #ffffff;
   background-image: url("/images/icons/burger.svg");
   background-repeat: no-repeat;
 }
 
 .advantages-advices-item-gift {
+  width: 400px;
+  padding: 80px 85px 81px;
+  box-sizing: border-box;
   background: rgba(131, 179, 211, 0.12);
   background-image: url("/images/icons/gift.svg");
   background-repeat: no-repeat;
@@ -258,11 +298,17 @@ body {
 }
 
 .advantages-item-road {
+  width: 400px;
+  padding: 103px 85px 102px;
+  box-sizing: border-box;
   background: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item-bridge-area,
 .advantages-item-tourist {
+  width: 400px;
+  padding: 103px 85px 102px;
+  box-sizing: border-box;
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -330,9 +376,17 @@ body {
 }
 
 .social-list {
+  margin: 0;
+  padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   width: 150px;
+}
+
+.social-item {
+width: 47px;
+height: 40px;
 }
 
 .footer-htmlacademy {
@@ -379,9 +433,37 @@ body {
   background-repeat: no-repeat;
 }
 
+.inner-header-title {
+  margin-top: 35px;
+  margin-bottom: 290px;
+  margin-left: 70px;
+}
+
+  .breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 72px;
+    margin-top: 118px;
+  }
+/* почему не работают отступы и хлебные крошки валяются? */
+  /* почему иконку домика видно только если закомментировать стили для   .breadcrumbs ? */
+
+ .homepage {
+    background-image: url("/images/homepage.svg");
+    background-repeat: no-repeat;
+  }
+
 .breadcrumbs-link {
   color: #ffffff;
   text-decoration: none;
+}
+
+/* здесь секцию в разметке заменила на див, убрала заголовок и хотела использовать как флекс контейнер, но не работает или неправильно делаю */
+.hotel-filter {
+display: flex;
+width: 1060px;
 }
 
 .hotels-amount {
@@ -460,7 +542,7 @@ body {
   text-transform: capitalize;
 }
 
-                             /* ////////////////////////////////пагинация */
+/* ////////////////////////////////пагинация */
 
 .pagination-link {
   font-weight: 700;
