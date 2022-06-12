@@ -231,7 +231,7 @@ margin-bottom: 90px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-  list-style: none
+  list-style-type: none
 }
 
 .advantages-item {
@@ -242,7 +242,7 @@ margin-bottom: 90px;
   font-weight: 400;
 
 }
-/* у айтемов разные паддинги, мне на два дива разделить их? */
+/* у айтемов по макету разные паддинги, мне на два разных дива разделить их? */
 .item {
   width: 400px;
   padding-top: 92px;
@@ -250,6 +250,7 @@ margin-bottom: 90px;
   padding-bottom: 92px;
   padding-left: 85px;
   box-sizing: border-box;
+
 }
 
 .advantages-advices {
@@ -259,7 +260,7 @@ margin-bottom: 90px;
   width: 1200px;
   color: #000000;
   background: #ffffff;
-  list-style: none
+  list-style-type: none
 }
 
 .advantages-advices-item-house {
@@ -425,20 +426,16 @@ height: 40px;
 
 /* ////////////////////////////////////каталог */
 
-.inner-header {
-  background-image: url("/images/background-catalog.jpg");
-  color: #ffffff;
-  background-color: #82B3D3;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-
 .inner-header-title {
   margin-top: 35px;
   margin-bottom: 290px;
   margin-left: 70px;
 }
 
+.homepage {
+  background-image: url("/images/homepage.svg");
+  background-repeat: no-repeat;
+}
   .breadcrumbs {
     display: flex;
     margin: 0;
@@ -450,18 +447,23 @@ height: 40px;
 /* почему не работают отступы и хлебные крошки валяются? */
   /* почему иконку домика видно только если закомментировать стили для   .breadcrumbs ? */
 
- .homepage {
-    background-image: url("/images/homepage.svg");
+
+  .hotels-choice {
+    display: flex;
+    background-image: url("/images/background-catalog.jpg");
+    color: #ffffff;
+    background-size: 100% auto;
     background-repeat: no-repeat;
   }
+
+/* теперь крошки совсем не видны */
 
 .breadcrumbs-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* здесь секцию в разметке заменила на див, убрала заголовок и хотела использовать как флекс контейнер, но не работает или неправильно делаю */
-.hotel-filter {
+.hotel-filter-form {
 display: flex;
 width: 1060px;
 }
@@ -492,8 +494,9 @@ width: 1060px;
   list-style: none;
 }
 
-..hotels-card {
+.hotels-card {
   width: 340px;
+
 }
 
 .hotels-card-link {
@@ -522,12 +525,10 @@ width: 1060px;
   font-size: 20px;
   line-height: 26px;
   color: #ffffff;
-  background-color: #82B3D3;
 }
 
 .hotel-filter-item {
   color: #ffffff;
-  background-color: #82B3D3;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -535,7 +536,6 @@ width: 1060px;
 
 .price {
   color: #ffffff;
-  background-color: #82B3D3;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -555,6 +555,11 @@ width: 1060px;
   border: 1px solid #82B3D3;
   border-radius: 4px;
   text-decoration: none;
+}
+
+.pagination-item {
+  width: 60px;
+  height: 60px;
 }
 
 .pagination-current {
@@ -579,4 +584,11 @@ width: 1060px;
 
 .pagination-container {
   display: flex;
+}
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
