@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -44,6 +45,7 @@ body {
 
 .navigation {
   display: flex;
+  height: 65px;
 }
 
 .page-header-logo {
@@ -60,9 +62,9 @@ body {
   margin: 0;
   padding: 0;
   width: 470px;
+  height: 66px;
   list-style: none;
 }
-
 
 .navigation-user-list {
   display: flex;
@@ -82,7 +84,13 @@ body {
   text-decoration: none;
 }
 
-/* по макету паддинги у кнопки и значков разные. Прописать в разных селекторах? */
+/* как сделать линию как в макете - чтобы по ширине слова, а не паддингов? */
+
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
+}
+
+
 
 .navigation-user-link {
   display: block;
@@ -94,17 +102,20 @@ body {
   color: #000000;
   text-decoration: none;
   min-width: 19px;
-min-height: 17px;
+  min-height: 17px;
 }
 
 .search {
   background-image: url("/images/search.svg");
   background-repeat: no-repeat;
+  width: 42px;
 }
+
 
 .favorite {
   background-image: url("/images/favorite.svg");
   background-repeat: no-repeat;
+  width: 42px;
 }
 
 .visually-hidden {
@@ -118,11 +129,6 @@ min-height: 17px;
   overflow: hidden;
 }
 
-/* если я использую такой вариант, картинки соцсетей в футере остаются на месте, если предложенный в скринкасте - исчезали, появились когда задала им размеры по величине кнопки */
-/*.visually-hidden {
-  visibility: hidden;
-}*/
-
 .button {
   font-weight: 700;
   font-size: 16px;
@@ -133,23 +139,46 @@ min-height: 17px;
   background: #756157;
   border-radius: 4px;
   text-decoration: none;
+  height: 37px;
+  width: 160px;
+  margin-right: 70px;
+  margin-left: 20px;
 }
 
+.first-button {
+  display: inline-block;
+  margin: 0;
+  width: 140px;
+  margin-right: 20px;
+}
 
 .second-button {
+  display: inline-block;
+  margin: 0;
   background: #82B3D3;
+  margin-left: 20px;
+  width: 140px;
 }
 
 .selected-button {
+  display: inline-block;
+  margin: 0;
   background: #7DB54F;
+  margin-left: 20px;
 }
 
 .invitation-button {
+  display: inline-block;
+  width: 574px;
+  height: 60px;
   font-size: 20px;
   line-height: 36px;
 }
 
 .subscribe-button {
+  display: inline-block;
+  width: 200px;
+  height: 60px;
   font-size: 20px;
   line-height: 36px;
   color: #FFFFFF;
@@ -173,6 +202,7 @@ min-height: 17px;
 }
 
 .apply-button {
+  margin: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -193,16 +223,16 @@ min-height: 17px;
   background-image: url("/images/divider.svg"), url("/images/background-index.jpg");
   color: #000000;
   background-color: #ffffff;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  background-size: 100% auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, top;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
-/* почему не сработал марджин у внутренней картинки? Почему у всех фоновых картинок неполная высота? */
 .intro-img {
   display: block;
   margin: 0 auto;
-  margin-bottom: 82px;
 }
 
 .advantages {
@@ -220,7 +250,7 @@ min-height: 17px;
 }
 
 .advantages-text {
-margin-bottom: 90px;
+  margin-bottom: 90px;
 }
 
 .advantages-list {
@@ -237,12 +267,12 @@ margin-bottom: 90px;
 .advantages-item {
   width: 400px;
   min-height: 384px;
-  font-size: 21px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 21px;
   font-weight: 400;
 
 }
-/* у айтемов по макету разные паддинги, мне на два разных дива разделить их? */
+
 .item {
   width: 400px;
   padding-top: 92px;
@@ -264,34 +294,49 @@ margin-bottom: 90px;
 }
 
 .advantages-advices-item-house {
+  display: flex;
+  flex-direction: column;
   width: 400px;
-  padding: 80px 85px 81px;
+  padding: 182px 85px 81px;
   box-sizing: border-box;
   background: rgba(131, 179, 211, 0.12);
   background-image: url("/images/icons/house.svg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 81px;
 }
 
+/* почему у меня слова топовый фирменный бургер не встают в одну строку, как на макете, все паддинги соблюдены и шрифт проверила..? */
+
 .advantages-advices-item-burger {
+  display: flex;
+  flex-direction: column;
   width: 400px;
-  padding: 80px 85px 81px;
+  padding: 182px 85px 81px;
   box-sizing: border-box;
   background: #ffffff;
   background-image: url("/images/icons/burger.svg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 81px;
 }
 
 .advantages-advices-item-gift {
+  display: flex;
+  flex-direction: column;
   width: 400px;
-  padding: 80px 85px 81px;
+  padding: 182px 85px 81px;
   box-sizing: border-box;
   background: rgba(131, 179, 211, 0.12);
   background-image: url("/images/icons/gift.svg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 81px;
 }
 
 
 .advantages-item-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -323,11 +368,18 @@ margin-bottom: 90px;
   background: #82B3D3;
 }
 
+/* ////////////////////////подписка */
+
 .invitation {
   text-align: center;
 }
 
 .subscribe-index {
+  display: flex;
+  flex-direction: column;
+  padding: 94px 200px;
+  width: 800px;
+  height: 223px;
   text-align: center;
   background-image: url("/images/background-index-subscribe.jpg");
   color: #ffffff;
@@ -337,6 +389,11 @@ margin-bottom: 90px;
 }
 
 .subscribe-catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 94px 200px;
+  width: 800px;
+  height: 223px;
   text-align: center;
   color: #000000;
 }
@@ -370,10 +427,22 @@ margin-bottom: 90px;
   line-height: 26px;
 }
 
+/* чтото не то делаю, да? Как форму сделать как а макете? */
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
 /* ///////////////////////////////////футер */
 
 .page-footer {
   display: flex;
+  padding: 40px 70px 30px;
 }
 
 .social-list {
@@ -386,8 +455,8 @@ margin-bottom: 90px;
 }
 
 .social-item {
-width: 47px;
-height: 40px;
+  width: 47px;
+  height: 40px;
 }
 
 .footer-htmlacademy {
@@ -412,51 +481,53 @@ height: 40px;
 .vk {
   background-image: url("/images/social/vkontakte.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .telegram {
   background-image: url("/images/social/telegram.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .youtube {
   background-image: url("/images/social/youtube.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ////////////////////////////////////каталог */
 
 .inner-header-title {
   margin-top: 35px;
-  margin-bottom: 290px;
   margin-left: 70px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
 }
 
 .homepage {
   background-image: url("/images/homepage.svg");
   background-repeat: no-repeat;
+  width: 12px;
 }
-  .breadcrumbs {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    margin-left: 72px;
-    margin-top: 118px;
-  }
-/* почему не работают отступы и хлебные крошки валяются? */
-  /* почему иконку домика видно только если закомментировать стили для   .breadcrumbs ? */
 
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 72px;
+}
 
-  .hotels-choice {
-    display: flex;
-    background-image: url("/images/background-catalog.jpg");
-    color: #ffffff;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
+/* картинка не встаёт на высоту контейнера страницы, зазор получается между фото-фоном и навигацией. Как исправить? */
 
-/* теперь крошки совсем не видны */
+.hotels-choice {
+  background-image: url("/images/background-catalog.jpg");
+  color: #ffffff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 
 .breadcrumbs-link {
   color: #ffffff;
@@ -464,8 +535,38 @@ height: 40px;
 }
 
 .hotel-filter-form {
-display: flex;
-width: 1060px;
+  display: flex;
+  width: 1060px;
+  padding: 40px 70px 70px;
+}
+
+.hotel-filter-list {
+  width: 150.43px;
+  list-style: none;
+  padding: 0;
+  margin-right: 70px;
+}
+.price {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: capitalize;
+  margin-left: 97px;
+}
+
+.apply-reset {
+  padding: 0;
+  margin-left: 70px;
+  width: 160px;
+  box-sizing: border-box;
+}
+
+
+.hotels-select {
+  display: flex;
+  align-items: center;
+  padding-left: 72px;
 }
 
 .hotels-amount {
@@ -476,15 +577,57 @@ width: 1060px;
   color: #000000;
 }
 
-.hotels-select {
-  display: flex;
-  padding-left: 72px;
+.hotel-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
 }
 
-.icons-list-item {
+.hotel-filter-item {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+/* //////////////////карточки отелей */
+
+.select-control {
+  margin-left: auto;
+  margin-right: 78px;
+}
+
+.icons-list {
+  display: flex;
+  margin-right: 71px;
+  list-style-type: none;
+}
+
+.icons-list-link {
+  width: 48px;
+  height: 48px;
   color: #000000;
-  background: #ffffff;
   text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+
+.view-cards {
+  background-image: url("/images/icons/View-1.svg");
+  */ background-repeat: no-repeat;
+}
+
+.view-screen {
+  background-image: url("/images/icons/View-2.svg");
+  */ background-repeat: no-repeat;
+}
+
+.view-list {
+  background-image: url("/images/icons/View-3.svg");
+  */ background-repeat: no-repeat;
 }
 
 .hotels-list {
@@ -492,6 +635,11 @@ width: 1060px;
   flex-wrap: wrap;
   padding-left: 18px;
   list-style: none;
+}
+
+.hotel-card-buttons {
+  width: 300px;
+  display: flex;
 }
 
 .hotels-card {
@@ -514,33 +662,9 @@ width: 1060px;
   color: #333333;
 }
 
-.inner-header-title {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 78px;
-}
 
-.hotel-filter-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  color: #ffffff;
-}
 
-.hotel-filter-item {
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.price {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  text-transform: capitalize;
-}
+/* как мне пользоваться валидатором в редакторе кода? он не открывает свою панель чтобы показать ошибки */
 
 /* ////////////////////////////////пагинация */
 
@@ -549,18 +673,23 @@ width: 1060px;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
+  align-items: center;
   text-transform: uppercase;
   color: #FFFFFF;
   background: #82B3D3;
   border: 1px solid #82B3D3;
   border-radius: 4px;
   text-decoration: none;
+  width: 60px;
+  height: 60px;
+  display: block;
 }
 
 .pagination-item {
-  width: 60px;
-  height: 60px;
+  margin-right: 8px;
 }
+
+/* text-align: center;  не действует на расположение цифр посередине относительно высоты кнопки. Также все надписи в кнопках не по центру, а вверху. ЧТо делать? */
 
 .pagination-current {
   font-weight: 700;
@@ -591,4 +720,5 @@ width: 1060px;
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
