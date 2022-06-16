@@ -34,7 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -90,7 +90,7 @@ body {
   border-bottom: 2px solid #756257;
 }
 
-
+/* здесь у меня что-то не ладится с расположением значков и кнопки */
 
 .navigation-user-link {
   display: block;
@@ -129,6 +129,7 @@ body {
   overflow: hidden;
 }
 
+/* задаю марджины как в макете - кнопка сползает вниз. Как исправить? */
 .button {
   font-weight: 700;
   font-size: 16px;
@@ -141,6 +142,7 @@ body {
   text-decoration: none;
   height: 37px;
   width: 160px;
+  padding: 0;
   margin-right: 70px;
   margin-left: 20px;
 }
@@ -168,6 +170,7 @@ body {
 }
 
 .invitation-button {
+  margin: 56px 313px 93px;
   display: inline-block;
   width: 574px;
   height: 60px;
@@ -183,7 +186,7 @@ body {
   line-height: 36px;
   color: #FFFFFF;
   background: #82B3D3;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 10px 10px 0;
 }
 
 .stars-button {
@@ -198,7 +201,7 @@ body {
   width: 140px;
   height: 37px;
   left: 160px;
-  top: 0px;
+  top: 0;
 }
 
 .apply-button {
@@ -250,6 +253,7 @@ body {
 }
 
 .advantages-text {
+  margin: 0;
   margin-bottom: 90px;
 }
 
@@ -271,6 +275,22 @@ body {
   line-height: 21px;
   font-weight: 400;
 
+}
+
+.advantages-item-title {
+  margin: 0 0 30px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-item-description {
+  margin: 30px 0 0;
+}
+
+.advantages-advices-description {
+margin: 30px 0 0;
 }
 
 .item {
@@ -334,15 +354,6 @@ body {
   background-position-y: 81px;
 }
 
-
-.advantages-item-title {
-  margin: 0;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .advantages-item-road {
   width: 400px;
   padding: 103px 85px 102px;
@@ -374,6 +385,23 @@ body {
   text-align: center;
 }
 
+.invitation-title {
+  margin-top: 91px;
+  margin-bottom: 29px;
+  font-family: "PT-Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.invitation-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
 .subscribe-index {
   display: flex;
   flex-direction: column;
@@ -398,29 +426,19 @@ body {
   color: #000000;
 }
 
-.invitation-title {
-  font-family: "PT-Sans", sans-serif;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .subscribe-title {
+  margin: 0;
+  margin-bottom: 29px;
   font-family: "PT-Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.invitation-description {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
 }
 
 .subscribe-description {
+  margin: 0;
+  margin-bottom: 46px;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -546,6 +564,7 @@ body {
   padding: 0;
   margin-right: 70px;
 }
+
 .price {
   color: #ffffff;
   font-weight: 700;
@@ -617,17 +636,17 @@ body {
 
 .view-cards {
   background-image: url("/images/icons/View-1.svg");
-  */ background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .view-screen {
   background-image: url("/images/icons/View-2.svg");
-  */ background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .view-list {
   background-image: url("/images/icons/View-3.svg");
-  */ background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .hotels-list {
