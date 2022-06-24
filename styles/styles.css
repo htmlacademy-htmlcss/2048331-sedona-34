@@ -67,9 +67,13 @@ body {
 }
 
 .navigation-user-list {
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+  margin-right: 70px;
+  padding: 0;
   display: flex;
   max-width: 310px;
-  margin-left: auto;
   list-style: none;
 }
 
@@ -84,39 +88,37 @@ body {
   text-decoration: none;
 }
 
-/* Псевдоэлементом, это будет в разделе декоративных элементов, нужно убрать паддинги с ссылки, повесить паддинг сверху и снизу на li, между элементами маргин на li. У псевдоэлемента сделать абсолютное позиционирование относительно ссылки и сдвинуть вниз, ширину сделать 100%, высоту равную высоте линии, перекрасить фон. */
-
 .navigation-link-current {
   border-bottom: 2px solid #756257;
 }
 
-/* здесь у меня что-то не ладится с расположением значков и кнопки */
-
 .navigation-user-link {
   display: block;
-  padding: 9px 15px 8px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   text-align: center;
   color: #000000;
   text-decoration: none;
-  min-width: 19px;
-  min-height: 17px;
-  margin-right: 70px;
+
 }
 
 .search {
   background-image: url("/images/search.svg");
   background-repeat: no-repeat;
-  width: 42px;
+  width: 18px;
+  background-position: center;
+  min-height: 18px;
+  padding: 23px 12px 24px;
 }
-
 
 .favorite {
   background-image: url("/images/favorite.svg");
   background-repeat: no-repeat;
-  width: 42px;
+  width: 18px;
+  background-position: center;
+  min-height: 18px;
+  padding: 24px 12px 25px;
 }
 
 .visually-hidden {
@@ -130,7 +132,7 @@ body {
   overflow: hidden;
 }
 
-/* задаю марджины как в макете - кнопка сползает вниз. Как исправить? */
+
 .button {
   font-weight: 700;
   font-size: 16px;
@@ -141,9 +143,8 @@ body {
   background: #756157;
   border-radius: 4px;
   text-decoration: none;
-  height: 37px;
   width: 160px;
-  padding: 0;
+  padding: 9px 15px 8px;
   margin-left: 20px;
 }
 
@@ -152,6 +153,7 @@ body {
   margin: 0;
   width: 140px;
   margin-right: 20px;
+  padding: 9px 15px 8px;
 }
 
 .second-button {
@@ -160,6 +162,7 @@ body {
   background: #82B3D3;
   margin-left: 20px;
   width: 140px;
+  padding: 9px 15px 8px;
 }
 
 .selected-button {
@@ -167,13 +170,15 @@ body {
   margin: 0;
   background: #7DB54F;
   margin-left: 20px;
+  width: 140px;
+  padding: 9px 15px 8px;
 }
 
 .invitation-button {
   margin: 56px 313px 93px;
   display: inline-block;
   width: 574px;
-  height: 60px;
+  padding: 12px 0;
   font-size: 20px;
   line-height: 36px;
 }
@@ -187,6 +192,7 @@ body {
   color: #FFFFFF;
   background: #82B3D3;
   border-radius: 0 10px 10px 0;
+  margin-left: 0;
 }
 
 .stars-button {
@@ -206,6 +212,8 @@ body {
 
 .apply-button {
   margin: 0;
+  padding: 14px 15px;
+  border: none;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -215,6 +223,14 @@ body {
   color: #FFFFFF;
   background: #82B3D3;
   border-radius: 4px;
+}
+
+.reset-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  width: 65px;
+  padding: 0;
 }
 
 .page-header {
@@ -290,7 +306,7 @@ body {
 }
 
 .advantages-advices-description {
-margin: 30px 0 0;
+  margin: 30px 0 0;
 }
 
 .item {
@@ -326,13 +342,11 @@ margin: 30px 0 0;
   background-position-y: 81px;
 }
 
-/* почему у меня слова топовый фирменный бургер не встают в одну строку, как на макете, все паддинги соблюдены и шрифт проверила..? */
-
 .advantages-advices-item-burger {
   display: flex;
   flex-direction: column;
   width: 400px;
-  padding: 182px 85px 81px;
+  padding: 182px 79px 81px;
   box-sizing: border-box;
   background: #ffffff;
   background-image: url("/images/icons/burger.svg");
@@ -450,11 +464,14 @@ margin: 30px 0 0;
 .subscribe-form {
   display: flex;
   justify-content: center;
-  width: 600px;
   margin: 0 auto;
   padding: 0;
 }
 
+.subscribe-form-input {
+  width: 600px;
+  border-radius: 10px 0 0 10px;
+}
 
 /* ///////////////////////////////////футер */
 
@@ -538,8 +555,6 @@ margin: 30px 0 0;
   margin-left: 72px;
 }
 
-/* картинка не встаёт на высоту контейнера страницы, зазор получается между фото-фоном и навигацией. Как исправить? */
-
 .hotels-choice {
   padding-top: 35px;
   background-image: url("/images/background-catalog.jpg");
@@ -551,6 +566,10 @@ margin: 30px 0 0;
 .breadcrumbs-link {
   color: #ffffff;
   text-decoration: none;
+}
+
+.hotel-filter-fieldset {
+  border: none;
 }
 
 .hotel-filter-form {
@@ -697,15 +716,14 @@ margin: 30px 0 0;
   border-radius: 4px;
   text-decoration: none;
   width: 60px;
-  height: 60px;
+  padding-top: 11px;
+  padding-bottom: 12px;
   display: block;
 }
 
 .pagination-item {
   margin-right: 8px;
 }
-
-/* text-align: center;  не действует на расположение цифр посередине относительно высоты кнопки. Также все надписи в кнопках не по центру, а вверху. ЧТо делать? */
 
 .pagination-current {
   font-weight: 700;
@@ -730,7 +748,8 @@ margin: 30px 0 0;
 .pagination-container {
   display: flex;
   padding-left: 73px;
-padding-right: 71px;}
+  padding-right: 71px;
+}
 
 .pagination {
   display: flex;

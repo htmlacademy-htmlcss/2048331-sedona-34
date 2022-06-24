@@ -11,28 +11,27 @@
     <div class="container">
       <header class="page-header">
         <nav class="navigation">
-          <a class="page-header-logo" href="index.html"><img alt="Логотип Седоны." src="images/logo-header.svg"
-              width="139" height="70"></a>
+          <img class="page-header-logo" alt="Логотип Седоны." src="images/logo-header.svg" width="139" height="70">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link" href="index.html">Главная</a>
+              <a class="navigation-link navigation-link-current" href="main.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="about.html">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="hotels.html">Гостиницы</a>
+              <a class="navigation-link" href="/catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-user-list">
-            <li class="navigation-user-item search">
-              <a class="navigation-user-link" href="#">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link search" href="#">
                 <span class="visually-hidden">поиск
                 </span>
               </a>
             </li>
-            <li class="navigation-user-item favorite">
-              <a class="navigation-user-link" href="#">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link favorite" href="#">
                 <span class="visually-hidden">избранное
                 </span>
                 <span class="likes-amount">12</span>
@@ -64,7 +63,7 @@
           <section class="hotel-filter">
             <h2 class="visually-hidden">Фильтр поиска жилья</h2>
             <form class="hotel-filter-form" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="">
+              <fieldset class="hotel-filter-fieldset">
                 <legend class="hotel-filter-title">Инфраструктура</legend>
                 <ul class="hotel-filter-list">
                   <li class="hotel-filter-item">
@@ -87,7 +86,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="hotel-filter-fieldset">
                 <legend class="hotel-filter-title">Тип жилья:</legend>
                 <ul class="hotel-filter-list">
                   <li class="hotel-filter-item">
@@ -110,7 +109,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="price">
+              <fieldset class="hotel-filter-fieldset price">
                 <legend>Стоимость (Р):</legend>
                 <p>
                   <label for="filter-min-price">от </label>
@@ -124,7 +123,7 @@
               </fieldset>
               <div class="apply-reset">
                 <button class="button apply-button" type="submit">Применить</button>
-                <button type="reset">сбросить</button>
+                <button class="reset-button" type="reset">сбросить</button>
               </div>
             </form>
           </section>
@@ -285,7 +284,7 @@
           <p class="subscribe-description"> Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
           <form class="subscribe-form" action="#" method="post">
             <label class="form-label" for="subscribe-email"></label>
-            <input type="email" placeholder="Ваш e-mail" id="subscribe-email" name="subscribe-email">
+            <input class="subscribe-form-input" type="email" placeholder="Ваш e-mail" id="subscribe-email" name="subscribe-email">
             <button class="button subscribe-button" type="submit">Подписаться</button>
           </form>
         </section>
