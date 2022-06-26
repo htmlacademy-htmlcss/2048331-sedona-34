@@ -247,9 +247,9 @@ margin-left: auto;
   background-image: url("/images/divider.svg"), url("/images/background-index.jpg");
   color: #000000;
   background-color: #ffffff;
-  background-size: 100% auto, cover;
+  background-size: 101% auto, cover;
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom, top;
+  background-position: center calc(100% + 1px), top;
   padding-top: 51px;
   padding-bottom: 82px;
 }
@@ -681,7 +681,7 @@ margin-left: auto;
   display: grid;
   gap: 40px 58px;
   list-style: none;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(3, 300px);
   padding-left: 73px;
   margin-bottom: 96px;
 }
@@ -692,7 +692,7 @@ margin-left: auto;
 }
 
 .hotels-card {
-  width: 340px;
+  width: 300px;
 }
 
 .hotels-card-rating {
