@@ -89,7 +89,13 @@ body {
 }
 
 .navigation-link-current {
-  border-bottom: 2px solid #756257;
+  /*border-bottom: 2px solid #756257;
+  Left: 17px, right: 17px*/
+  position: relative;
+  text-decoration-line: underline;
+  text-underline-offset: 23px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #756257;
 }
 
 .navigation-user-link {
@@ -205,9 +211,8 @@ body {
   background: #F2F2F2;
   border-radius: 4px;
   width: 140px;
-  height: 37px;
-  left: 160px;
-  top: 0;
+margin: 0;
+margin-left: auto;
 }
 
 .apply-button {
@@ -230,7 +235,7 @@ body {
   color: #ffffff;
   border: none;
   width: 65px;
-  padding: 0;
+  padding-top: 22px;
 }
 
 .page-header {
@@ -242,9 +247,9 @@ body {
   background-image: url("/images/divider.svg"), url("/images/background-index.jpg");
   color: #000000;
   background-color: #ffffff;
-  background-size: 100% auto, cover;
+  background-size: 101% auto, cover;
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom, top;
+  background-position: center calc(100% + 1px), top;
   padding-top: 51px;
   padding-bottom: 82px;
 }
@@ -595,6 +600,9 @@ body {
 }
 
 .apply-reset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
   margin-left: 70px;
   width: 160px;
@@ -670,10 +678,12 @@ body {
 }
 
 .hotels-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 18px;
+  display: grid;
+  gap: 40px 58px;
   list-style: none;
+  grid-template-columns: repeat(3, 300px);
+  padding-left: 73px;
+  margin-bottom: 96px;
 }
 
 .hotel-card-buttons {
@@ -682,8 +692,11 @@ body {
 }
 
 .hotels-card {
-  width: 340px;
+  width: 300px;
+}
 
+.hotels-card-rating {
+display: flex;
 }
 
 .hotels-card-link {
@@ -701,7 +714,22 @@ body {
   color: #333333;
 }
 
+.stars {
+  margin: auto 0;
+  width: 89px;
+  height: 17px;
+  background-image: url("/images/star.svg");
+  background-repeat: space;
+}
+
 /* ////////////////////////////////пагинация */
+
+.pagination-container {
+  display: flex;
+  padding-left: 73px;
+  padding-right: 71px;
+
+}
 
 .pagination-link {
   font-weight: 700;
@@ -745,11 +773,6 @@ body {
   color: #333333;
 }
 
-.pagination-container {
-  display: flex;
-  padding-left: 73px;
-  padding-right: 71px;
-}
 
 .pagination {
   display: flex;
