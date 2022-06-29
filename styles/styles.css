@@ -49,6 +49,7 @@ body {
 }
 
 .page-header-logo {
+  display: block;
   width: 139px;
   margin-right: 30px;
   margin-left: 70px;
@@ -140,6 +141,7 @@ body {
 
 
 .button {
+  display: inline-block;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -152,32 +154,28 @@ body {
   width: 160px;
   padding: 9px 15px 8px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .first-button {
-  display: inline-block;
   margin: 0;
-  width: 140px;
+  width: 110px;
   margin-right: 20px;
   padding: 9px 15px 8px;
 }
 
 .second-button {
-  display: inline-block;
   margin: 0;
   background: #82B3D3;
-  margin-left: 20px;
-  width: 140px;
-  padding: 9px 15px 8px;
+  width: 120px;
+  padding: 9px 10px 8px;
 }
 
 .selected-button {
-  display: inline-block;
   margin: 0;
   background: #7DB54F;
-  margin-left: 20px;
-  width: 140px;
-  padding: 9px 15px 8px;
+  width: 120px;
+  padding: 9px 10px 8px;
 }
 
 .invitation-button {
@@ -190,7 +188,6 @@ body {
 }
 
 .subscribe-button {
-  display: inline-block;
   width: 200px;
   height: 60px;
   font-size: 20px;
@@ -464,8 +461,6 @@ margin-left: auto;
   line-height: 26px;
 }
 
-/* чтото не то делаю, да? Как форму сделать как а макете? */
-
 .subscribe-form {
   display: flex;
   justify-content: center;
@@ -495,11 +490,32 @@ margin-left: auto;
 }
 
 .social-item {
+  position: relative;
   width: 47px;
   height: 40px;
 }
 
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3
+}
+
+.social-icon:hover
+.social-icon:focus  {
+  fill: #68A2CA;
+}
+
+.social-icon:active {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 .footer-htmlacademy {
+  display: block;
   margin-left: auto;
   max-width: 115px;
 }
@@ -518,22 +534,13 @@ margin-left: auto;
   text-decoration: none;
 }
 
-.vk {
-  background-image: url("/images/social/vkontakte.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-phone-link:hover
+.footer-phone-link:focus {
+  color: #756157;
 }
 
-.telegram {
-  background-image: url("/images/social/telegram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.youtube {
-  background-image: url("/images/social/youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-phone-link:active{
+color: rgba(117, 97, 87, 0.3);
 }
 
 /* ////////////////////////////////////каталог */
@@ -546,12 +553,6 @@ margin-left: auto;
   line-height: 78px;
 }
 
-.homepage {
-  background-image: url("/images/homepage.svg");
-  background-repeat: no-repeat;
-  width: 12px;
-}
-
 .breadcrumbs {
   display: flex;
   margin: 0;
@@ -560,17 +561,27 @@ margin-left: auto;
   margin-left: 72px;
 }
 
+.breadcrumbs-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.arrow {
+  padding-right: 10px;
+  padding-left: 10px;
+  background-image: url("/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 5px 6px;
+  background-position: center;
+
+}
+
 .hotels-choice {
   padding-top: 35px;
   background-image: url("/images/background-catalog.jpg");
   color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.breadcrumbs-link {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 .hotel-filter-fieldset {
@@ -653,29 +664,24 @@ margin-left: auto;
 }
 
 .icons-list-link {
+  margin-left: 8px;
   width: 48px;
   height: 48px;
-  color: #000000;
+  color:#000000;
   text-decoration: none;
   display: block;
   text-align: center;
 }
 
-
-.view-cards {
-  background-image: url("/images/icons/View-1.svg");
-  background-repeat: no-repeat;
+.icons-list-link svg {
+  fill: #E5E5E5;
 }
 
-.view-screen {
-  background-image: url("/images/icons/View-2.svg");
-  background-repeat: no-repeat;
+.icons-list-link:hover {
+  outline: 2px solid #000000;
+  fill: #000000;
 }
 
-.view-list {
-  background-image: url("/images/icons/View-3.svg");
-  background-repeat: no-repeat;
-}
 
 .hotels-list {
   display: grid;
@@ -686,17 +692,36 @@ margin-left: auto;
   margin-bottom: 96px;
 }
 
-.hotel-card-buttons {
-  width: 300px;
-  display: flex;
-}
-
 .hotels-card {
   width: 300px;
 }
 
+.hotels-card-image {
+  display: block;
+}
+
+.hotels-card-title {
+margin: 0;
+margin-top: 16px;
+}
+
+.hotels-card-info {
+
+display: flex;}
+
+.hotels-card-info-left {
+width: 160px;
+}
+
+.hotel-card-buttons {
+  width: 300px;
+  display: flex;
+  margin-top: 16px;
+}
+
 .hotels-card-rating {
 display: flex;
+margin-top: 16px;
 }
 
 .hotels-card-link {
@@ -708,6 +733,8 @@ display: flex;
 }
 
 .hotels-card-info {
+  margin: 0;
+  margin-top: 16px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -720,6 +747,14 @@ display: flex;
   height: 17px;
   background-image: url("/images/star.svg");
   background-repeat: space;
+}
+
+.three-stars {
+  width: 66px;
+}
+
+.two-stars {
+  width: 42px;
 }
 
 /* ////////////////////////////////пагинация */
