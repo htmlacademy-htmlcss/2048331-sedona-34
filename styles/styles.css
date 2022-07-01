@@ -49,10 +49,11 @@ body {
 }
 
 .page-header-logo {
+  position: absolute;
+  display: block;
   width: 139px;
   margin-right: 30px;
   margin-left: 70px;
-  position: relative;
   z-index: 1;
 }
 
@@ -64,6 +65,35 @@ body {
   width: 470px;
   height: 66px;
   list-style: none;
+  margin-left: 239px;
+}
+
+.navigation-link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 17px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-link-current {
+  text-decoration-line: underline;
+  text-underline-offset: 26px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #756257;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-user-list {
@@ -77,27 +107,6 @@ body {
   list-style: none;
 }
 
-.navigation-link {
-  display: block;
-  padding: 20px 17px;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-}
-
-.navigation-link-current {
-  /*border-bottom: 2px solid #756257;
-  Left: 17px, right: 17px*/
-  position: relative;
-  text-decoration-line: underline;
-  text-underline-offset: 23px;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #756257;
-}
-
 .navigation-user-link {
   display: block;
   font-size: 16px;
@@ -106,7 +115,6 @@ body {
   text-align: center;
   color: #000000;
   text-decoration: none;
-
 }
 
 .search {
@@ -115,16 +123,31 @@ body {
   width: 18px;
   background-position: center;
   min-height: 18px;
-  padding: 23px 12px 24px;
+  padding: 23px 1px 24px;
+  margin-right: 12px;
 }
 
 .favorite {
+  position: relative;
   background-image: url("/images/favorite.svg");
   background-repeat: no-repeat;
   width: 18px;
   background-position: center;
   min-height: 18px;
-  padding: 24px 12px 25px;
+  padding: 24px 0;
+  margin-right: 12px;
+}
+
+.likes-amount {
+  color: #ffffff;
+  font-size: 10px;
+  background: #7DB54F;
+  border-radius: 10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 14px;
+  top: 15px;
 }
 
 .visually-hidden {
@@ -140,6 +163,7 @@ body {
 
 
 .button {
+  display: inline-block;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -149,35 +173,64 @@ body {
   background: #756157;
   border-radius: 4px;
   text-decoration: none;
-  width: 160px;
+  width: 130px;
   padding: 9px 15px 8px;
   margin-left: 20px;
+  cursor: pointer;
+}
+
+.button:hover ,
+.button:focus  {
+  background: #615048;
+}
+
+.button:active {
+  background:  #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background:  #E5E5E5;
+  color: #FFFFFF;
 }
 
 .first-button {
-  display: inline-block;
   margin: 0;
-  width: 140px;
+  width: 110px;
   margin-right: 20px;
   padding: 9px 15px 8px;
 }
 
 .second-button {
-  display: inline-block;
   margin: 0;
   background: #82B3D3;
-  margin-left: 20px;
-  width: 140px;
-  padding: 9px 15px 8px;
+  width: 120px;
+  padding: 9px 10px 8px;
+}
+
+.second-button:hover,
+.second-button:focus  {
+  background: #68A2CA;
+}
+
+.second-button:active {
+  background:  #82B3D3;
 }
 
 .selected-button {
-  display: inline-block;
   margin: 0;
   background: #7DB54F;
-  margin-left: 20px;
-  width: 140px;
-  padding: 9px 15px 8px;
+  width: 120px;
+  padding: 9px 10px 8px;
+}
+
+.selected-button:hover ,
+.selected-button:focus  {
+  background: #6C9E42;
+}
+
+.selected-button:active {
+  background:  #7DB54F;
 }
 
 .invitation-button {
@@ -190,7 +243,6 @@ body {
 }
 
 .subscribe-button {
-  display: inline-block;
   width: 200px;
   height: 60px;
   font-size: 20px;
@@ -199,6 +251,15 @@ body {
   background: #82B3D3;
   border-radius: 0 10px 10px 0;
   margin-left: 0;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus  {
+  background: #68A2CA;
+}
+
+.subscribe-button:active {
+  background:  #82B3D3;
 }
 
 .stars-button {
@@ -211,12 +272,15 @@ body {
   background: #F2F2F2;
   border-radius: 4px;
   width: 140px;
-margin: 0;
-margin-left: auto;
+  margin: 0;
+  margin-left: auto;
+  padding: 9px 17px 8px;
+  box-sizing: border-box;
 }
 
 .apply-button {
   margin: 0;
+  width: 160px;
   padding: 14px 15px;
   border: none;
   font-weight: 700;
@@ -235,10 +299,27 @@ margin-left: auto;
   color: #ffffff;
   border: none;
   width: 65px;
-  padding-top: 22px;
+  margin-top: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reset-button:focus {
+  color: #FFFFFF;
+}
+
+.reset-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .page-header {
+  position: relative;
   color: #000000;
   background: #ffffff;
 }
@@ -464,8 +545,6 @@ margin-left: auto;
   line-height: 26px;
 }
 
-/* чтото не то делаю, да? Как форму сделать как а макете? */
-
 .subscribe-form {
   display: flex;
   justify-content: center;
@@ -495,13 +574,28 @@ margin-left: auto;
 }
 
 .social-item {
+  position: relative;
   width: 47px;
   height: 40px;
 }
 
-.footer-htmlacademy {
-  margin-left: auto;
-  max-width: 115px;
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-phone {
@@ -518,22 +612,28 @@ margin-left: auto;
   text-decoration: none;
 }
 
-.vk {
-  background-image: url("/images/social/vkontakte.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-phone-link:hover,
+.footer-phone-link:focus {
+  color: #756157;
 }
 
-.telegram {
-  background-image: url("/images/social/telegram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-phone-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
-.youtube {
-  background-image: url("/images/social/youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-htmlacademy {
+  display: block;
+  margin-left: auto;
+  max-width: 115px;
+}
+
+.footer-htmlacademy-link:hover svg,
+.footer-htmlacademy-link:focus svg {
+  fill: #756157;
+}
+
+.footer-htmlacademy-link:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* ////////////////////////////////////каталог */
@@ -546,12 +646,6 @@ margin-left: auto;
   line-height: 78px;
 }
 
-.homepage {
-  background-image: url("/images/homepage.svg");
-  background-repeat: no-repeat;
-  width: 12px;
-}
-
 .breadcrumbs {
   display: flex;
   margin: 0;
@@ -560,17 +654,44 @@ margin-left: auto;
   margin-left: 72px;
 }
 
+.breadcrumbs-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #FFFFFF;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-item::before {
+  order: 2;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-image: url("/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 5px 6px;
+  background-position: center;
+  content: "";
+}
+
+.breadcrumbs-item:first-child::before {
+  display: none;
+}
+
 .hotels-choice {
   padding-top: 35px;
   background-image: url("/images/background-catalog.jpg");
   color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.breadcrumbs-link {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 .hotel-filter-fieldset {
@@ -653,28 +774,28 @@ margin-left: auto;
 }
 
 .icons-list-link {
-  width: 48px;
-  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  margin-left: 8px;
+  width: 44px;
+  height: 44px;
   color: #000000;
   text-decoration: none;
-  display: block;
-  text-align: center;
 }
 
-
-.view-cards {
-  background-image: url("/images/icons/View-1.svg");
-  background-repeat: no-repeat;
+.icons-list-link:hover {
+  border-color: #000000;
 }
 
-.view-screen {
-  background-image: url("/images/icons/View-2.svg");
-  background-repeat: no-repeat;
+.icons-list-link:focus {
+  border-color: #68A2CA;
 }
 
-.view-list {
-  background-image: url("/images/icons/View-3.svg");
-  background-repeat: no-repeat;
+.icons-list-link:active {
+  border-color: #000000;
 }
 
 .hotels-list {
@@ -686,17 +807,37 @@ margin-left: auto;
   margin-bottom: 96px;
 }
 
-.hotel-card-buttons {
-  width: 300px;
-  display: flex;
-}
-
 .hotels-card {
   width: 300px;
 }
 
+.hotels-card-image {
+  display: block;
+}
+
+.hotels-card-title {
+  margin: 0;
+  margin-top: 16px;
+}
+
+.hotels-card-info {
+
+  display: flex;
+}
+
+.hotels-card-info-left {
+  width: 160px;
+}
+
+.hotel-card-buttons {
+  width: 300px;
+  display: flex;
+  margin-top: 16px;
+}
+
 .hotels-card-rating {
-display: flex;
+  display: flex;
+  margin-top: 16px;
 }
 
 .hotels-card-link {
@@ -708,6 +849,8 @@ display: flex;
 }
 
 .hotels-card-info {
+  margin: 0;
+  margin-top: 16px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -722,13 +865,27 @@ display: flex;
   background-repeat: space;
 }
 
+.three-stars {
+  width: 66px;
+}
+
+.two-stars {
+  width: 42px;
+}
+
 /* ////////////////////////////////пагинация */
 
 .pagination-container {
   display: flex;
   padding-left: 73px;
   padding-right: 71px;
+}
 
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .pagination-link {
@@ -736,7 +893,6 @@ display: flex;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
-  align-items: center;
   text-transform: uppercase;
   color: #FFFFFF;
   background: #82B3D3;
@@ -749,11 +905,22 @@ display: flex;
   display: block;
 }
 
+.pagination-link:hover,
+.pagination-link:focus  {
+  background: #68A2CA;
+}
+
+.pagination-link:active {
+  background:  #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .pagination-item {
   margin-right: 8px;
 }
 
 .pagination-current {
+  border: none;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -771,13 +938,4 @@ display: flex;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-}
-
-
-.pagination {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
 }
