@@ -39,27 +39,46 @@
               <div class="counter">
                 <button type="button" class="counter-minus">
                   <svg width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" />
+                    <path d="M0 0L0 1L13 1V0L0 0Z" />
                   </svg>
                 </button>
                 <input class="counter-input" id="adults" type="text" value="2">
 
                 <button type="button" class="counter-plus">
                   <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.3">
-                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                    <g>
+                      <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
                     </g>
-                    </svg>
+                  </svg>
                 </button>
               </div>
-              <div class="popover-info">
+              <span class="children-text  form-label-icon">
                 <label class="children-text" for="children">Дети:</label>
-                <button class="info" type="button"></button>
-              </div>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25"  xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12.5" cy="12.5" r="12.5" />
+                      <g clip-path="url(#clip0_51791_451)">
+                        <path d="M12 17H13V11H12V17Z" fill="white" />
+                        <path d="M13 8H12V9H13V8Z" fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_51791_451">
+                          <rect width="1" height="9" fill="white" transform="translate(12 8)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                    вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              </span>
+
               <div class="counter">
                 <button type="button" class="counter-minus">
-                  <svg width="13" height="1" viewBox="0 0 13 1"  xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z"/>
+                  <svg width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 1L13 1V0L0 0Z" />
                   </svg>
                 </button>
 
@@ -67,10 +86,10 @@
 
                 <button type="button" class="counter-plus">
                   <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.3">
-                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                    <g>
+                      <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
                     </g>
-                    </svg>
+                  </svg>
                 </button>
               </div>
 

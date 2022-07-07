@@ -1260,7 +1260,7 @@ body {
   text-transform: uppercase;
   color: #000000;
   margin-top: -8px;
-  margin-bottom: 62px;
+  margin-bottom: 59px;
 }
 
 .search-form {
@@ -1270,7 +1270,11 @@ body {
 
 .search-form-date {
   position: relative;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
+}
+
+.search-form-date + .search-form-date {
+margin-top: -8px;
 }
 
 .checkin-text {
@@ -1278,7 +1282,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  margin-right: 37px;
+  margin-right: 34px;
 }
 
 .checkout-text {
@@ -1286,7 +1290,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  margin-right: 31px;
+  margin-right: 29px;
 }
 
 .input-modal {
@@ -1300,8 +1304,22 @@ body {
   padding-bottom: 14px;
   background: #F2F2F2;
   border-radius: 4px;
-  border: none;
+  border: 3px solid transparent;
   box-sizing: border-box;
+}
+
+.input-modal:hover {
+  background: #E6E6E6;
+}
+
+.input-modal:focus {
+  background: #E6E6E6;
+  border: 3px solid #83B3D3
+}
+
+.input-modal:active {
+  background: #FFFFFF;
+  border: 2px solid #000000;
 }
 
 .calendar {
@@ -1312,7 +1330,7 @@ body {
   height: 15px;
   background-image: url("../images/calendar.svg");
   margin-right: 20px;
-  margin-top: 19px;
+  margin-top: 22px;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -1320,7 +1338,7 @@ body {
 
 .modal-text {
   position: absolute;
-  top: 43px;
+  top: 46px;
   left: 154px;
   font-family: inherit;
   font-size: 16px;
@@ -1332,7 +1350,8 @@ body {
 }
 
 .search-form-guests {
-  margin-bottom: 39px;
+  margin-top: -6px;
+  margin-bottom: 41px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -1343,7 +1362,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .children-text {
@@ -1351,31 +1370,78 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-
+  margin-right: -4px;
 }
 
-
-.popover-info {
-  position: relative;
-}
-
-.info {
+.tooltip {
   position: absolute;
-  top: 2px;
-  left: 56px;
-  background-color: #83B3D3;
+  margin-top: 19px;
+  margin-left: 8px;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
-  border: none;
-  background-image: url("../images/popup-i.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
 }
 
-.info:active {
-  background-color: #68A2CA;
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  fill: #83B3D3;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  fill: #68A2CA;;
+}
+
+.tooltip-text {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: none;
+  padding: 15px  18px 18px 22px;
+  background: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: block;
+  width: 216px;
+  position: absolute;
+  color: #FFFFFF;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  /*display: none;*/
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.form-label-icon {
+  position: relative;
+  padding-right: 16px;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .counter {
@@ -1411,6 +1477,7 @@ body {
   top: 13px;
   left: 12px;
   cursor: pointer;
+  opacity: 0.3;
 }
 
 .counter-plus {
@@ -1425,6 +1492,7 @@ body {
   align-items: center;
   top: 13px;
   right: 13px;
+  opacity: 0.3;
 }
 
 .counter-minus:hover svg,
