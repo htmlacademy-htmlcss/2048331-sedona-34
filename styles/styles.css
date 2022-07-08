@@ -1225,7 +1225,7 @@ body {
 }
 
 .modal-container-close {
-
+display: block;
 }
 
 .modal {
