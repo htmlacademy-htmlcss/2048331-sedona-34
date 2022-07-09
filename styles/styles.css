@@ -25,7 +25,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000;
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 .container {
@@ -65,7 +65,7 @@ body {
   width: 470px;
   height: 66px;
   list-style: none;
-  margin-left: 254px;
+  margin-left: 256px;
 }
 
 .navigation-link {
@@ -235,7 +235,7 @@ body {
 }
 
 .invitation-button {
-  margin: 56px 313px 93px;
+  margin: 57px 313px 93px;
   display: inline-block;
   width: 574px;
   padding: 12px 0;
@@ -315,8 +315,8 @@ body {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  margin-top: 20px;
-  padding-left: 2px;
+  margin-top: 17px;
+  padding-right: 2px;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -343,7 +343,7 @@ body {
 .intro {
   background-image: url("../images/divider.svg"), url("../images/background-index.jpg");
   color: #000000;
-  background-color: #ffffff;
+  background-color: rgba(131, 179, 211, 0.12);
   background-size: 101% auto, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center calc(100% + 1px), top;
@@ -366,15 +366,15 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 32px;
-  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-top: 62px;
 }
 
 .advantages-text {
   font-size: 22px;
   Line-height: 26px;
   margin: 0;
-  margin-bottom: 92px;
+  margin-bottom: 90px;
 }
 
 .advantages-list {
@@ -406,11 +406,11 @@ body {
 }
 
 .advantages-item-description {
-  margin: 28px 0 0;
+  margin: 30px 0 0;
 }
 
 .advantages-advices-description {
-  margin: 0 0;
+  margin: 0;
 }
 
 .item {
@@ -521,30 +521,28 @@ body {
 .subscribe-index {
   display: flex;
   flex-direction: column;
-  padding: 94px 200px;
+  padding: 94px 200px 99px 200px;
   width: 800px;
-  height: 223px;
   text-align: center;
   background-image: url("../images/background-index-subscribe.jpg");
   color: #ffffff;
   background-color: rgba(131, 179, 211, 0.2);
-  background-size: 100% auto;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .subscribe-catalog {
   display: flex;
   flex-direction: column;
-  padding: 118px 200px;
+  padding: 118px 200px 98px 200px;
   width: 800px;
-  height: 223px;
   text-align: center;
   color: #000000;
 }
 
 .subscribe-title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -637,7 +635,7 @@ body {
 }
 
 .footer-phone {
-  margin-left: auto;
+  margin-left: 228px;;
 }
 
 .footer-phone-link {
@@ -663,7 +661,8 @@ body {
   display: block;
   margin-left: auto;
   max-width: 115px;
-}
+  margin-top: 3px;
+  }
 
 .footer-htmlacademy-link:hover svg,
 .footer-htmlacademy-link:focus svg {
@@ -732,6 +731,7 @@ body {
   color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .hotel-filter-fieldset {
@@ -743,7 +743,7 @@ body {
 .hotel-filter-form {
   display: flex;
   width: 1060px;
-  padding: 40px 70px 70px;
+  padding: 40px 70px 66px;
 }
 
 .hotel-filter-title {
@@ -841,10 +841,8 @@ body {
   padding-top: 12px;
   padding-bottom: 11px;
   font-family: inherit;
-  font-weight: 700;
   background-color: transparent;
   border: 2px solid #FFFFFF;
-  border-radius: 4px;
   border-radius: 4px 0 0 4px;
   width: 119px;
   color: #FFFFFF;
@@ -871,7 +869,7 @@ body {
 
 .input:focus {
   border: 2px solid #FFFFFF;
-  box-shadow: 0px 0px 0px 3px #81B3D2;
+  box-shadow: 0 0 0 3px #81B3D2;
 }
 
 
@@ -936,7 +934,6 @@ body {
 }
 
 .apply-reset {
-  align-items: flex-end;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -952,7 +949,7 @@ body {
   margin-top: 56px;
   display: flex;
   align-items: center;
-  padding-left: 72px;
+  padding-left: 73px;
 }
 
 .hotels-amount {
@@ -1117,8 +1114,17 @@ body {
 
 /* ////////////////////////////////пагинация */
 
-.pagination-container {
+.pagination-container::before {
+  content: "";
+  width: 1055px;
+  height: 1px;
+  top: -30px;
+  position: absolute;
+  background-color: #E6E6E6;
+}
 
+.pagination-container {
+  position: relative;
   display: flex;
   padding-left: 72px;
   padding-right: 23px;
@@ -1177,7 +1183,7 @@ body {
 
 .select-amount {
   Width: 386px;
-  padding: 6px 48px;
+  padding: 4px 48px;
   margin-left: auto;
   font-weight: 400;
   font-size: 18px;
@@ -1193,7 +1199,7 @@ body {
   width: 160px;
   margin-left: 46px;
   appearance: none;
-  padding: 14px 16px;
+  padding: 13px 16px;
   background-color: transparent;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1225,7 +1231,7 @@ body {
 }
 
 .modal-container-close {
-display: block;
+  display: none;
 }
 
 .modal {
@@ -1240,7 +1246,6 @@ display: block;
 .modal-search {
   width: 715px;
   box-sizing: border-box;
-
 }
 
 .modal-close-button {
@@ -1284,7 +1289,7 @@ display: block;
   text-transform: uppercase;
   color: #000000;
   margin-top: -8px;
-  margin-bottom: 59px;
+  margin-bottom: 62px;
 }
 
 .search-form {
@@ -1294,11 +1299,11 @@ display: block;
 
 .search-form-date {
   position: relative;
-  margin-bottom: 41px;
+  margin-bottom: 47px;
 }
 
 .search-form-date + .search-form-date {
-  margin-top: -8px;
+  margin-top: -9px;
 }
 
 .checkin-text {
@@ -1306,7 +1311,7 @@ display: block;
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  margin-right: 34px;
+  margin-right: 35px;
 }
 
 .checkout-text {
@@ -1314,7 +1319,7 @@ display: block;
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  margin-right: 29px;
+  margin-right: 30px;
 }
 
 .input-modal {
@@ -1348,13 +1353,11 @@ display: block;
 
 .calendar {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   width: 15px;
   height: 15px;
   background-image: url("../images/calendar.svg");
-  margin-right: 20px;
-  margin-top: 22px;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -1362,7 +1365,7 @@ display: block;
 
 .modal-text {
   position: absolute;
-  top: 46px;
+  top: 44px;
   left: 154px;
   font-family: inherit;
   font-size: 16px;
@@ -1374,8 +1377,8 @@ display: block;
 }
 
 .search-form-guests {
-  margin-top: -6px;
-  margin-bottom: 41px;
+  margin-top: -9px;
+  margin-bottom: 40px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -1399,7 +1402,7 @@ display: block;
 
 .tooltip {
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 55px;
   width: 25px;
   height: 25px;
@@ -1435,11 +1438,10 @@ display: block;
   background: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  display: block;
   width: 216px;
   position: absolute;
   color: #FFFFFF;
-  top: 35px;
+  top: 39px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
