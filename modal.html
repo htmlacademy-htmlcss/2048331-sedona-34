@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button type="button" class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <div class="search-form-date">
+              <label class="checkin-text" for="checkin">Дата Заезда:</label>
+              <input class="input-modal" id="checkin" type="text" name="arrival-date" placeholder="27 апреля 2020">
+              <button class="calendar" type="button"></button>
+              <p class="modal-text danger">Мы не можем отправить вас в прошлое.
+              </p>
+            </div>
+
+            <div class="search-form-date">
+              <label class="checkout-text" for="checkout">Дата Выезда:</label>
+              <input class="input-modal" id="checkout" type="text" name="departure-date" placeholder="1 сентября 2021">
+              <button class="calendar" type="button"></button>
+              <p class="modal-text">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+
+            <div class="search-form-guests">
+
+              <label class="adults-text" for="adults">Взрослые:</label>
+              <div class="counter">
+                <button type="button" class="counter-minus">
+                  <svg width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 1L13 1V0L0 0Z" />
+                  </svg>
+                </button>
+                <input class="counter-input" id="adults" type="text" value="2">
+                <button type="button" class="counter-plus">
+                  <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+
+              <span class="children-text  form-label-icon">
+                <label class="children-text" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25"  xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12.5" cy="12.5" r="12.5" />
+                      <g clip-path="url(#clip0_51791_451)">
+                        <path d="M12 17H13V11H12V17Z" fill="white" />
+                        <path d="M13 8H12V9H13V8Z" fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_51791_451">
+                          <rect width="1" height="9" fill="white" transform="translate(12 8)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                    вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              </span>
+
+              <div class="counter">
+                <button type="button" class="counter-minus">
+                  <svg width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 1L13 1V0L0 0Z" />
+                  </svg>
+                </button>
+
+                <input class="counter-input" id="children" type="text" value="1">
+
+                <button type="button" class="counter-plus">
+                  <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+            <button class="button search-button" type="submit">Найти</button>
+
+          </form>
+        </section>
+
+      </div>
+
+    </div>
+  </body>
+
+</html>
