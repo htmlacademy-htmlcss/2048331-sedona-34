@@ -25,7 +25,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000;
-  background: #FFFFFF;
+  background: #F2F2F2;;
 }
 
 .container {
@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background-color: #FFFFFF;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -306,7 +307,6 @@ body {
   background: #82B3D3;
 }
 
-
 .reset-button {
   background-color: transparent;
   color: #ffffff;
@@ -343,7 +343,7 @@ body {
 .intro {
   background-image: url("../images/divider.svg"), url("../images/background-index.jpg");
   color: #000000;
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: rgba(48, 88, 117, 0.733);
   background-size: 101% auto, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center calc(100% + 1px), top;
@@ -436,7 +436,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 400px;
-  padding: 182px 85px 81px;
+  padding: 182px 112px 81px;
   box-sizing: border-box;
   background: rgba(131, 179, 211, 0.12);
   background-image: url("../images/icons/house.svg");
@@ -526,7 +526,7 @@ body {
   text-align: center;
   background-image: url("../images/background-index-subscribe.jpg");
   color: #ffffff;
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: rgba(48, 88, 117, 0.733);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -731,7 +731,7 @@ body {
   color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: rgba(48, 88, 117, 0.733);
 }
 
 .hotel-filter-fieldset {
@@ -908,20 +908,19 @@ body {
   background: #FFFFFF;
   border-radius: 5px;
   cursor: pointer;
-}
+  border: none;
+ }
 
 .range-toggle:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:active {
-  border: 2px solid #83B3D3;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 2px #83B3D3, 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
 .range-toggle:focus {
-  border: 3px solid #83B3D3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 3px #83B3D3, 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .toggle-min {
@@ -1227,7 +1226,7 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #F2F2F2;
+  background: rgba(242, 242, 242, 0.8);
 }
 
 .modal-container-close {
@@ -1281,7 +1280,7 @@ body {
 .modal-title {
   margin: 0;
   margin-left: -2px;
-  font-family: 'PT Sans';
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -1428,7 +1427,7 @@ body {
 }
 
 .tooltip-text {
-  font-family: 'PT Sans';
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
