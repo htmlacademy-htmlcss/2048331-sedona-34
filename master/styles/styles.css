@@ -860,6 +860,7 @@ opacity: 0.5;
   font-family: inherit;
   background-color: transparent;
   border: 2px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
   border-radius: 4px 0 0 4px;
   width: 119px;
   color: #FFFFFF;
@@ -870,6 +871,7 @@ opacity: 0.5;
 
 .input-right {
   border-radius: 0 4px 4px 0;
+  border-left: 1px solid #FFFFFF;
   padding-left: 16px;
   width: 122px;
 }
